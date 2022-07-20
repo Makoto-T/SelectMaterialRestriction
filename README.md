@@ -1,4 +1,4 @@
-# restoreMaterialRestriction
+# SelectMaterialRestriction
 Cinema 4DのPythonスクリプトです．
 
 ポリゴンオブジェクトのマテリアルタグに設定してあるポリゴン選択範囲を選択するスクリプトです．  
