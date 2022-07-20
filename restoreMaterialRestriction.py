@@ -20,16 +20,13 @@ def main() -> None:
     # オブジェクトの最初のタグを取得
     tag = op.GetFirstTag()
     
-    
     # アンドゥを記録
     doc.AddUndo(c4d.UNDOTYPE_CHANGE_SELECTION, op)
-    
     
     # オブジェクトの選択を解除
     polySelection = op.GetPolygonS()
     polySelection.DeselectAll()
 
-    
     # ポリゴン選択範囲タグのリストにポリゴン選択範囲タグを格納
     polySelectionTags = []
     getPolygonSelectionTags(tag, polySelectionTags)
@@ -44,8 +41,8 @@ def main() -> None:
             # マテリアルタグの’選択範囲に限定’が設定してあるかどうか
             if tag[c4d.TEXTURETAG_RESTRICTION]:
                 
-                # ポリゴン選択範囲タグのリストにその選択範囲タグがあるかどうか調べる
-                for index, poluSelectionTag in enumerate(polySelectionTags):
+                # ポリゴン選択範囲タグ格納用リストから一致する選択範囲タグがあるかどうか調べる
+                for poluSelectionTag in polySelectionTags:
                     
                     # 選択版に限定しているタグがあった場合
                     if(tag[c4d.TEXTURETAG_RESTRICTION] == poluSelectionTag[c4d.ID_BASELIST_NAME]):
