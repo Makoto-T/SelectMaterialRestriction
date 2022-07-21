@@ -42,13 +42,13 @@ def main() -> None:
             if tag[c4d.TEXTURETAG_RESTRICTION]:
                 
                 # ポリゴン選択範囲タグ格納用リストから一致する選択範囲タグがあるかどうか調べる
-                for poluSelectionTag in polySelectionTags:
+                for polySelectionTag in polySelectionTags:
                     
-                    # 選択版に限定しているタグがあった場合
-                    if(tag[c4d.TEXTURETAG_RESTRICTION] == poluSelectionTag[c4d.ID_BASELIST_NAME]):
+                    # 選択範囲に限定しているタグがあった場合
+                    if(tag[c4d.TEXTURETAG_RESTRICTION] == polySelectionTag[c4d.ID_BASELIST_NAME]):
                 
                         # 選択範囲をマージする
-                        mergeSelection(poluSelectionTag, polySelection)
+                        mergeSelection(polySelectionTag, polySelection)
                     
         
         # 次のタグへ      
