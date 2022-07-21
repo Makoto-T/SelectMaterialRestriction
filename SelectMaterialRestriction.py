@@ -64,7 +64,7 @@ def main() -> None:
     
     return
 
-# ポリゴン選択範囲タグをリストに追加する
+# ポリゴン選択範囲タグをリストに追加する関数
 def getPolygonSelectionTags(tag, tags):
     # オブジェクトのタグを全て調べる
     while(tag):
